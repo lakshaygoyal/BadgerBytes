@@ -1,0 +1,86 @@
+
+#maindiv {
+    width:70vw;
+    height:40vh;
+    float: center;
+    background-image: url("bg2.jpg");
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#divone{
+    width:50%;
+    height:100%;
+    float:left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#divtwo{
+    background-color:white;
+    height:90%;
+    width:40%;
+    float:left;
+}
+#image {
+    width:60%;
+    height:90%;
+    border-color: black;
+    margin-left:auto;
+    margin-right:2%;
+}
+/*top right bottom left;*/
+
+#menuname {
+    font-size: 200%;
+    margin:0;
+    padding:30px 20px 0px 20px;
+}
+#price {
+    padding:10px 20px 0px 20px;
+    margin:0;
+    font-size: 20px;
+}
+#avail {
+    padding:0px 20px 0px 20px;
+    margin:0;
+    font-size: 20px;
+}
+.add-button{
+    margin: 10px 20px 20px 20px;
+    padding-top:2%;
+    padding-bottom:2%;
+    background-color:black;
+    color:white;
+}
+/*QUANTITY*/
+#quantity{
+    display: inline-block; 
+}
+
+.inputtext {
+    width: 30px;
+    height: 35px;
+    margin:0px;
+    padding:0px;
+    border:0px;
+    text-align: center;
+    background-color: black;
+    color:white;
+}
+
+.minus,.plus {
+    width: 25px;
+    height: 35px;
+    margin:0px;
+    padding:0px;
+    border:0px;
+    background-color: black;
+    color:white;
+    cursor:pointer;
+}
+
+.minus:hover, .plus:hover {
+ background: #424241; 
+}
