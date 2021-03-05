@@ -6,10 +6,8 @@ import {
   Button,
   ListGroupItem,
   ListGroup,
-  Container,
-  CardDeck
+  Container
 } from "react-bootstrap";
-
 import ItemCard from "./ItemCard";
 export default class Admin extends React.Component {
   constructor(props) {
@@ -100,7 +98,7 @@ export default class Admin extends React.Component {
     if (this.state.update) {
       return (
         <>
-          <Container >
+          <Container>
             <Card>
               <Card.Title>Create New Menu Item</Card.Title>
               <h6>Image URl:</h6>
@@ -110,7 +108,7 @@ export default class Admin extends React.Component {
                 placeholder="URL"
                 value={this.state.image}
                 onChange={this.handleImage}
-                required="true"
+                required
               />
               <h6>Name: </h6>
               <input
@@ -119,7 +117,7 @@ export default class Admin extends React.Component {
                 placeholder="John"
                 value={this.state.name}
                 onChange={this.handleName}
-                required="true"
+                required
               />
               <h6>Price: </h6>
               <input
@@ -128,7 +126,7 @@ export default class Admin extends React.Component {
                 placeholder="5$"
                 value={this.state.price}
                 onChange={this.handlePrice}
-                required="true"
+                required
               />
               <h6>Availability (Yes/No): </h6>
               <input
@@ -137,15 +135,12 @@ export default class Admin extends React.Component {
                 placeholder="Yes"
                 value={this.state.available}
                 onChange={this.handleA}
-                required="true"
+                required
               />
 
               <Button onClick={this.handleSubmit} variant="primary">
                 Create New Item
               </Button>
-              
-              <Button onClick={this.updateItem} variant="danger">
-Cancel              </Button>
             </Card>
           </Container>
         </>
@@ -153,16 +148,12 @@ Cancel              </Button>
     }
     return (
       <>
-       
-          <CardDeck>
+        <Container>
           {this.getMenuItems()}
-          </CardDeck>
           <a onClick={this.updateItem} href="#" class="float">
             +
           </a>
-          
-      
-        
+        </Container>
       </>
     );
   }
