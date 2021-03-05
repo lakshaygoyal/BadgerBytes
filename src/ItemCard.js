@@ -8,7 +8,6 @@ import {
   Container,
   Button
 } from "react-bootstrap";
-
 export default class ItemCard extends React.Component {
   constructor(props) {
     super(props);
@@ -84,7 +83,7 @@ export default class ItemCard extends React.Component {
     if (this.state.update === true) {
       return (
         <>
-          <Card >
+          <Card style={{ "max-width": "50%" }}>
             <Card.Title>Edit Details</Card.Title>
             <h6>Image URl:</h6>
             <input
@@ -122,17 +121,14 @@ export default class ItemCard extends React.Component {
             <Button onClick={this.handleSubmit} variant="primary">
               Send Changes
             </Button>
-            <Button onClick={this.updateItem} variant="danger">
-              Cancel Edit
-            </Button>
           </Card>
         </>
       );
     }
     return (
       <>
-        <Card >
-          <Card.Img variant="top" fluid src={this.state.data.image} />
+        <Card style={{ "max-width": "50%" }}>
+          <Card.Img variant="top" src={this.state.data.image} />
           <Card.Body>
             <Card.Title>{this.state.data.name}</Card.Title>
           </Card.Body>
